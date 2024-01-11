@@ -2,9 +2,10 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/hello')
-def helloIndex():
-    print("Hello world log console")
-    return 'Hello World from Python Flask!'
+@app.route("/")
+def index():
+    return "<h1>Hello!</h1>"
 
-app.run(host='0.0.0.0', port=4444)
+if __name__ == "__main__":
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=8080)
