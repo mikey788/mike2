@@ -2,7 +2,7 @@
 
 from flask import Flask, render_template, Response
 import pygame
-#import cv2
+import cv2
 import numpy as np
 
 app = Flask(__name__)
